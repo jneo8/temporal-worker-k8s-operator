@@ -3,41 +3,26 @@
 #
 # Learn more at: https://juju.is/docs/sdk
 
-"""Literals used by the Temporal Worker K8s charm."""
+"""Compatibility exports for Temporal Worker literals."""
 
-VALID_LOG_LEVELS = ["info", "debug", "warning", "error", "critical"]
-
-REQUIRED_CHARM_CONFIG = ["namespace", "queue"]
-REQUIRED_CANDID_CONFIG = ["candid-url", "candid-username", "candid-public-key", "candid-private-key"]
-REQUIRED_OIDC_CONFIG = [
-    "oidc-auth-type",
-    "oidc-project-id",
-    "oidc-private-key-id",
-    "oidc-private-key",
-    "oidc-client-email",
-    "oidc-client-id",
-    "oidc-auth-uri",
-    "oidc-token-uri",
-    "oidc-auth-cert-url",
-    "oidc-client-cert-url",
-]
-SUPPORTED_AUTH_PROVIDERS = ["candid", "google"]
-PROMETHEUS_PORT = 9000
-AUTH_SECRET_PARAMETERS = [
-    "encryption-key",
-    "auth-provider",
-    "candid-url",
-    "candid-username",
-    "candid-public-key",
-    "candid-private-key",
-    "oidc-auth-type",
-    "oidc-project-id",
-    "oidc-private-key-id",
-    "oidc-private-key",
-    "oidc-client-email",
-    "oidc-client-id",
-    "oidc-auth-uri",
-    "oidc-token-uri",
-    "oidc-auth-cert-url",
-    "oidc-client-cert-url",
-]
+from charms.temporal_worker_k8s.v0.temporal_worker import (
+    _AUTH_SECRET_PARAMETERS as AUTH_SECRET_PARAMETERS,
+)
+from charms.temporal_worker_k8s.v0.temporal_worker import (
+    _PROMETHEUS_PORT as PROMETHEUS_PORT,
+)
+from charms.temporal_worker_k8s.v0.temporal_worker import (
+    _REQUIRED_CANDID_CONFIG as REQUIRED_CANDID_CONFIG,
+)
+from charms.temporal_worker_k8s.v0.temporal_worker import (
+    _REQUIRED_CHARM_CONFIG as REQUIRED_CHARM_CONFIG,
+)
+from charms.temporal_worker_k8s.v0.temporal_worker import (
+    _REQUIRED_OIDC_CONFIG as REQUIRED_OIDC_CONFIG,
+)
+from charms.temporal_worker_k8s.v0.temporal_worker import (
+    _SUPPORTED_AUTH_PROVIDERS as SUPPORTED_AUTH_PROVIDERS,
+)
+from charms.temporal_worker_k8s.v0.temporal_worker import (
+    _VALID_LOG_LEVELS as VALID_LOG_LEVELS,
+)
